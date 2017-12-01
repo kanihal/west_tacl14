@@ -1,0 +1,36 @@
+import networkx as nx
+import random
+from collections import deque
+
+G = nx.read_edgelist('wiki/wiki_trusts.txt', nodetype=int, data=(('weight',float),))
+n=len(G.nodes())
+
+def get_subgraph(G, seed):
+    _d = nx.bfs_successors(G, seed)
+    slct = set()
+    to_expand = deque([seed])
+    while True:
+        _n = to_expand.popleft()
+        if _n not in _d:
+            continue
+        for _nde in _d[_n]:
+            slct.add(_nde)
+            to_expand.append(_nde)
+        if len(slct)>=350:
+            break
+    return list(slct)
+
+seeds = []
+N = 10
+while True:
+    _s = random.randint(1, n)
+    if _s in G.nodes() and _s not in seeds:
+        seeds.append(_s)
+        if len(seeds)>=N:
+            break
+
+for i, seed in enumerate(seeds):
+    _b = get_subgraph(G, seed)
+    _sg = G.subgraph(_b)
+    nx.write_edgelist(_sg, 'sub_graph_fold%d.txt' % i, data=['weight'])
+    nx

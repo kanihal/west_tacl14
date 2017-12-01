@@ -1,0 +1,604 @@
+args0 = quad
+************* Experiment Configurations *************
+args0 = quad
+************* Experiment Configurations *************
+wiki.maxspeudolikelihood.constrainttolerance: 1e-2
+wiki.maxspeudolikelihood.numsamples: 10
+wiki.learningmethod: MPLE
+wiki.votedperceptron.numsteps: 10
+wiki.votedperceptron.stepsize: 1.0
+wiki.name: quad-mple-10-1.0
+
+*****************************************************
+0    [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.dbpath. Returning default of /tmp/psl-wiki.
+367  [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.rdbmsdatastore.valuecolumn. Returning default of truth.
+367  [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.rdbmsdatastore.confidencecolumn. Returning default of confidence.
+367  [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.rdbmsdatastore.partitioncolumn. Returning default of partition.
+374  [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.rdbmsdatastore.usestringids. Returning default of false.
+1533 [main] INFO  FoldUtils  - Split hashcode -392713980
+1959 [main] INFO  infolab.Wiki  - Computed training prior for fold 0 of 0.5834068843777581
+2005 [main] INFO  infolab.Wiki  - Computed testing prior for fold 0 of 0.58844287604764
+Saw 1134 rvs and 1133 obs
+2571 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value MPLE for option wiki.learningmethod.
+2580 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 1.0 for option wiki.votedperceptron.stepsize.
+2580 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 10 for option wiki.votedperceptron.numsteps.
+2580 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.maxspeudolikelihood.bool. Returning default of false.
+2580 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 10 for option wiki.maxspeudolikelihood.numsamples.
+2581 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.maxspeudolikelihood.minwidth. Returning default of 0.01.
+2581 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 1e-2 for option wiki.maxspeudolikelihood.constrainttolerance.
+2686 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.weightlearning.reasoner. Returning default of edu.umd.cs.psl.reasoner.admm.ADMMReasonerFactory@38467116.
+2689 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.maxiterations. Returning default of 25000.
+2689 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stepsize. Returning default of 1.0.
+2689 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonabs. Returning default of 1.0E-5.
+2690 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonrel. Returning default of 0.001.
+2690 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stopcheck. Returning default of 1.
+2691 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.numthreads. Returning default of 16.
+48812 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value quad-mple-10-1.0 for option wiki.name.
+Learned model quad-mple-10-1.0
+Model:
+{0.3749772569223572} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.37921711114754914} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.3237297016343469} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{10.565882205397786} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.3237297016343469} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.37921711114754914} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.3749772569223572} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{10.565882205397786} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.37921711114754914} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.3749772569223572} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.3237297016343469} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{10.565882205397786} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.13086555675370568} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.13086555675370568} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.13086555675370568} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{11.947535712766244} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{1.2282031892323972} ( ( KNOWS(A, B) & KNOWS(B, A) ) & TRUSTS(A, B) ) >> TRUSTS(B, A) {squared}
+{1.2282031892323972} ( ( KNOWS(A, B) & KNOWS(B, A) ) & ~( TRUSTS(A, B) ) ) >> ~( TRUSTS(B, A) ) {squared}
+{2.04974502202748} ( KNOWS(A, B) & PRIOR(0) ) >> TRUSTS(A, B) {squared}
+{0.43651177959869303} ( KNOWS(A, B) & TRUSTS(A, B) ) >> PRIOR(0) {squared}
+
+48948 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.mpeinference.reasoner. Returning default of edu.umd.cs.psl.reasoner.admm.ADMMReasonerFactory@465232e9.
+48949 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.maxiterations. Returning default of 25000.
+48949 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stepsize. Returning default of 1.0.
+48949 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonabs. Returning default of 1.0E-5.
+48949 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonrel. Returning default of 0.001.
+48949 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stopcheck. Returning default of 1.
+48949 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.numthreads. Returning default of 16.
+48986 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Grounding out model.
+52697 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Beginning inference.
+53211 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Inference complete. Writing results to Database.
+Area under positive-class PR curve: 0.5458324461083656
+Area under negative-class PR curve: 0.4673452949841298
+Area under ROC curve: 0.5037409983597501
+53532 [main] INFO  infolab.Wiki  - Computed training prior for fold 1 of 0.5934744268077602
+53559 [main] INFO  infolab.Wiki  - Computed testing prior for fold 1 of 0.5761245674740484
+Saw 1178 rvs and 1134 obs
+53793 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value MPLE for option wiki.learningmethod.
+53794 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 1.0 for option wiki.votedperceptron.stepsize.
+53794 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 10 for option wiki.votedperceptron.numsteps.
+53794 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.maxspeudolikelihood.bool. Returning default of false.
+53794 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 10 for option wiki.maxspeudolikelihood.numsamples.
+53794 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.maxspeudolikelihood.minwidth. Returning default of 0.01.
+53794 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 1e-2 for option wiki.maxspeudolikelihood.constrainttolerance.
+53845 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.weightlearning.reasoner. Returning default of edu.umd.cs.psl.reasoner.admm.ADMMReasonerFactory@38467116.
+53845 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.maxiterations. Returning default of 25000.
+53845 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stepsize. Returning default of 1.0.
+53845 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonabs. Returning default of 1.0E-5.
+53845 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonrel. Returning default of 0.001.
+53845 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stopcheck. Returning default of 1.
+53845 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.numthreads. Returning default of 16.
+102219 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value quad-mple-10-1.0 for option wiki.name.
+Learned model quad-mple-10-1.0
+Model:
+{0.6187771359877098} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.2799179665100751} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.42575256272692463} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{10.21783350424984} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.42575256272692463} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.2799179665100751} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.6187771359877098} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{10.21783350424984} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.2799179665100751} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.6187771359877098} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.42575256272692463} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{10.21783350424984} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.24735053562027534} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.24735053562027534} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.24735053562027534} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{12.184920307826795} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.4792335159863204} ( ( KNOWS(A, B) & KNOWS(B, A) ) & TRUSTS(A, B) ) >> TRUSTS(B, A) {squared}
+{0.4792335159863204} ( ( KNOWS(A, B) & KNOWS(B, A) ) & ~( TRUSTS(A, B) ) ) >> ~( TRUSTS(B, A) ) {squared}
+{2.020733176227563} ( KNOWS(A, B) & PRIOR(0) ) >> TRUSTS(A, B) {squared}
+{0.4915145208030144} ( KNOWS(A, B) & TRUSTS(A, B) ) >> PRIOR(0) {squared}
+
+102296 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.mpeinference.reasoner. Returning default of edu.umd.cs.psl.reasoner.admm.ADMMReasonerFactory@465232e9.
+102296 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.maxiterations. Returning default of 25000.
+102296 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stepsize. Returning default of 1.0.
+102296 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonabs. Returning default of 1.0E-5.
+102297 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonrel. Returning default of 0.001.
+102297 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stopcheck. Returning default of 1.
+102297 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.numthreads. Returning default of 16.
+102329 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Grounding out model.
+106066 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Beginning inference.
+106262 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Inference complete. Writing results to Database.
+Area under positive-class PR curve: 0.5665291477786005
+Area under negative-class PR curve: 0.4287665361644368
+Area under ROC curve: 0.48695479371265926
+106582 [main] INFO  infolab.Wiki  - Computed training prior for fold 2 of 0.5594227504244482
+106607 [main] INFO  infolab.Wiki  - Computed testing prior for fold 2 of 0.5711813067935958
+Saw 1133 rvs and 1178 obs
+106817 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value MPLE for option wiki.learningmethod.
+106817 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 1.0 for option wiki.votedperceptron.stepsize.
+106817 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 10 for option wiki.votedperceptron.numsteps.
+106817 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.maxspeudolikelihood.bool. Returning default of false.
+106817 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 10 for option wiki.maxspeudolikelihood.numsamples.
+106818 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.maxspeudolikelihood.minwidth. Returning default of 0.01.
+106818 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 1e-2 for option wiki.maxspeudolikelihood.constrainttolerance.
+106865 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.weightlearning.reasoner. Returning default of edu.umd.cs.psl.reasoner.admm.ADMMReasonerFactory@38467116.
+106865 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.maxiterations. Returning default of 25000.
+106865 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stepsize. Returning default of 1.0.
+106865 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonabs. Returning default of 1.0E-5.
+106865 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonrel. Returning default of 0.001.
+106865 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stopcheck. Returning default of 1.
+106865 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.numthreads. Returning default of 16.
+154441 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value quad-mple-10-1.0 for option wiki.name.
+Learned model quad-mple-10-1.0
+Model:
+{0.2938524723433936} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.3297527275894702} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.28775959413306407} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{10.211452924691093} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.28775959413306407} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.3297527275894702} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.2938524723433936} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{10.211452924691093} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.3297527275894702} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.2938524723433936} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.28775959413306407} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{10.211452924691093} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.1799498969839247} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.1799498969839247} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.1799498969839247} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{12.476821463610344} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{1.3680822977115745} ( ( KNOWS(A, B) & KNOWS(B, A) ) & TRUSTS(A, B) ) >> TRUSTS(B, A) {squared}
+{1.3680822977115745} ( ( KNOWS(A, B) & KNOWS(B, A) ) & ~( TRUSTS(A, B) ) ) >> ~( TRUSTS(B, A) ) {squared}
+{1.943613891267955} ( KNOWS(A, B) & PRIOR(0) ) >> TRUSTS(A, B) {squared}
+{0.39232114629962317} ( KNOWS(A, B) & TRUSTS(A, B) ) >> PRIOR(0) {squared}
+
+154524 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.mpeinference.reasoner. Returning default of edu.umd.cs.psl.reasoner.admm.ADMMReasonerFactory@465232e9.
+154524 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.maxiterations. Returning default of 25000.
+154524 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stepsize. Returning default of 1.0.
+154524 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonabs. Returning default of 1.0E-5.
+154524 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonrel. Returning default of 0.001.
+154524 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stopcheck. Returning default of 1.
+154524 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.numthreads. Returning default of 16.
+154556 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Grounding out model.
+158380 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Beginning inference.
+158595 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Inference complete. Writing results to Database.
+Area under positive-class PR curve: 0.5924662843975702
+Area under negative-class PR curve: 0.45918782056316493
+Area under ROC curve: 0.5163656757549484
+158783 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value quad-mple-10-1.0 for option wiki.name.
+Method quad-mple-10-1.0, fold 0, auprc positive: 0.5458324461083656, negative: 0.4673452949841298, auROC: 0.5037409983597501
+Method quad-mple-10-1.0, fold 1, auprc positive: 0.5665291477786005, negative: 0.4287665361644368, auROC: 0.48695479371265926
+Method quad-mple-10-1.0, fold 2, auprc positive: 0.5924662843975702, negative: 0.45918782056316493, auROC: 0.5163656757549484
+
+Method quad-mple-10-1.0, auprc positive: (mean/variance) 0.5682759594281789  /  3.6397815440009085E-4
+Method quad-mple-10-1.0, auprc negative: (mean/variance) 0.4517665505705772  /  2.7559106282940005E-4
+Method quad-mple-10-1.0, auROC: (mean/variance) 0.5023538226091192  /  1.4512879203248952E-4
+
+args0 = quad
+************* Experiment Configurations *************
+wiki.maxspeudolikelihood.constrainttolerance: 1e-2
+wiki.maxspeudolikelihood.numsamples: 10
+wiki.learningmethod: MPLE
+wiki.votedperceptron.numsteps: 10
+wiki.votedperceptron.stepsize: 1.0
+wiki.name: quad-mple-10-1.0
+
+*****************************************************
+0    [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.dbpath. Returning default of /tmp/psl-wiki.
+385  [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.rdbmsdatastore.valuecolumn. Returning default of truth.
+385  [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.rdbmsdatastore.confidencecolumn. Returning default of confidence.
+385  [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.rdbmsdatastore.partitioncolumn. Returning default of partition.
+392  [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.rdbmsdatastore.usestringids. Returning default of false.
+1515 [main] INFO  FoldUtils  - Split hashcode -392713980
+1914 [main] INFO  infolab.Wiki  - Computed training prior for fold 0 of 0.5834068843777581
+1961 [main] INFO  infolab.Wiki  - Computed testing prior for fold 0 of 0.58844287604764
+Saw 1134 rvs and 1133 obs
+2470 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value MPLE for option wiki.learningmethod.
+2480 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 1.0 for option wiki.votedperceptron.stepsize.
+2480 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 10 for option wiki.votedperceptron.numsteps.
+2480 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.maxspeudolikelihood.bool. Returning default of false.
+2480 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 10 for option wiki.maxspeudolikelihood.numsamples.
+2480 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.maxspeudolikelihood.minwidth. Returning default of 0.01.
+2481 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 1e-2 for option wiki.maxspeudolikelihood.constrainttolerance.
+2602 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.weightlearning.reasoner. Returning default of edu.umd.cs.psl.reasoner.admm.ADMMReasonerFactory@38467116.
+2607 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.maxiterations. Returning default of 25000.
+2607 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stepsize. Returning default of 1.0.
+2607 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonabs. Returning default of 1.0E-5.
+2607 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonrel. Returning default of 0.001.
+2608 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stopcheck. Returning default of 1.
+2609 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.numthreads. Returning default of 16.
+49601 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value quad-mple-10-1.0 for option wiki.name.
+Learned model quad-mple-10-1.0
+Model:
+{0.3749434871570748} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.3790963907021881} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.3237255832556899} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{10.56234635979753} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.3237255832556899} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.3790963907021881} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.3749434871570748} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{10.56234635979753} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.3790963907021881} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.3749434871570748} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.3237255832556899} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{10.56234635979753} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.13092729054731628} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.13092729054731628} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.13092729054731628} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{11.933789082694357} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{1.2295219448458856} ( ( KNOWS(A, B) & KNOWS(B, A) ) & TRUSTS(A, B) ) >> TRUSTS(B, A) {squared}
+{1.2295219448458856} ( ( KNOWS(A, B) & KNOWS(B, A) ) & ~( TRUSTS(A, B) ) ) >> ~( TRUSTS(B, A) ) {squared}
+{2.049714312901145} ( KNOWS(A, B) & PRIOR(0) ) >> TRUSTS(A, B) {squared}
+{0.43651177959869303} ( KNOWS(A, B) & TRUSTS(A, B) ) >> PRIOR(0) {squared}
+
+49763 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.mpeinference.reasoner. Returning default of edu.umd.cs.psl.reasoner.admm.ADMMReasonerFactory@465232e9.
+49763 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.maxiterations. Returning default of 25000.
+49764 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stepsize. Returning default of 1.0.
+49764 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonabs. Returning default of 1.0E-5.
+49764 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonrel. Returning default of 0.001.
+49764 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stopcheck. Returning default of 1.
+49764 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.numthreads. Returning default of 16.
+49802 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Grounding out model.
+53557 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Beginning inference.
+54103 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Inference complete. Writing results to Database.
+*****************************************************
+Area under positive-class PR curve: 0.5458429936509389
+Area under negative-class PR curve: 0.46736130274684423
+Area under ROC curve: 0.5037526935480573
+54425 [main] INFO  infolab.Wiki  - Computed training prior for fold 1 of 0.5934744268077602
+54451 [main] INFO  infolab.Wiki  - Computed testing prior for fold 1 of 0.5761245674740484
+Saw 1178 rvs and 1134 obs
+54718 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value MPLE for option wiki.learningmethod.
+54718 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 1.0 for option wiki.votedperceptron.stepsize.
+54718 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 10 for option wiki.votedperceptron.numsteps.
+54718 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.maxspeudolikelihood.bool. Returning default of false.
+54718 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 10 for option wiki.maxspeudolikelihood.numsamples.
+54718 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.maxspeudolikelihood.minwidth. Returning default of 0.01.
+54719 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 1e-2 for option wiki.maxspeudolikelihood.constrainttolerance.
+54770 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.weightlearning.reasoner. Returning default of edu.umd.cs.psl.reasoner.admm.ADMMReasonerFactory@38467116.
+54770 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.maxiterations. Returning default of 25000.
+54770 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stepsize. Returning default of 1.0.
+54770 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonabs. Returning default of 1.0E-5.
+54770 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonrel. Returning default of 0.001.
+54770 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stopcheck. Returning default of 1.
+54770 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.numthreads. Returning default of 16.
+104863 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value quad-mple-10-1.0 for option wiki.name.
+Learned model quad-mple-10-1.0
+Model:
+{0.6192011197575498} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.28001875805033527} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.4257862607542206} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{10.215948191988295} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.4257862607542206} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.28001875805033527} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.6192011197575498} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{10.215948191988295} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.28001875805033527} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.6192011197575498} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.4257862607542206} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{10.215948191988295} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.24755552915753753} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.24755552915753753} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.24755552915753753} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{12.192440867994053} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.4804713635030745} ( ( KNOWS(A, B) & KNOWS(B, A) ) & TRUSTS(A, B) ) >> TRUSTS(B, A) {squared}
+{0.4804713635030745} ( ( KNOWS(A, B) & KNOWS(B, A) ) & ~( TRUSTS(A, B) ) ) >> ~( TRUSTS(B, A) ) {squared}
+{2.0206645866071837} ( KNOWS(A, B) & PRIOR(0) ) >> TRUSTS(A, B) {squared}
+{0.4915145208030144} ( KNOWS(A, B) & TRUSTS(A, B) ) >> PRIOR(0) {squared}
+
+104946 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.mpeinference.reasoner. Returning default of edu.umd.cs.psl.reasoner.admm.ADMMReasonerFactory@465232e9.
+104946 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.maxiterations. Returning default of 25000.
+104947 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stepsize. Returning default of 1.0.
+104947 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonabs. Returning default of 1.0E-5.
+104947 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonrel. Returning default of 0.001.
+104947 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stopcheck. Returning default of 1.
+104947 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.numthreads. Returning default of 16.
+104980 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Grounding out model.
+108669 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Beginning inference.
+108872 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Inference complete. Writing results to Database.
+*****************************************************
+Area under positive-class PR curve: 0.5665107764946661
+Area under negative-class PR curve: 0.4287154988090172
+Area under ROC curve: 0.4869387676607092
+109108 [main] INFO  infolab.Wiki  - Computed training prior for fold 2 of 0.5594227504244482
+109136 [main] INFO  infolab.Wiki  - Computed testing prior for fold 2 of 0.5711813067935958
+Saw 1133 rvs and 1178 obs
+109375 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value MPLE for option wiki.learningmethod.
+109376 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 1.0 for option wiki.votedperceptron.stepsize.
+109376 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 10 for option wiki.votedperceptron.numsteps.
+109376 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.maxspeudolikelihood.bool. Returning default of false.
+109376 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 10 for option wiki.maxspeudolikelihood.numsamples.
+109376 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.maxspeudolikelihood.minwidth. Returning default of 0.01.
+109376 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 1e-2 for option wiki.maxspeudolikelihood.constrainttolerance.
+109423 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.weightlearning.reasoner. Returning default of edu.umd.cs.psl.reasoner.admm.ADMMReasonerFactory@38467116.
+109424 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.maxiterations. Returning default of 25000.
+109424 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stepsize. Returning default of 1.0.
+109424 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonabs. Returning default of 1.0E-5.
+109424 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonrel. Returning default of 0.001.
+109424 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stopcheck. Returning default of 1.
+109424 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.numthreads. Returning default of 16.
+158591 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value quad-mple-10-1.0 for option wiki.name.
+Learned model quad-mple-10-1.0
+Model:
+{0.2939952022504845} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.3296777952845609} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.2875978932393105} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{10.207768550583253} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.2875978932393105} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.3296777952845609} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.29399520225048453} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{10.207768550583253} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.3296777952845609} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.2939952022504845} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.2875978932393105} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{10.207768550583253} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.17991743820335981} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.17991743820335981} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.17991743820335981} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{12.46802467485792} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{1.3684927938887348} ( ( KNOWS(A, B) & KNOWS(B, A) ) & TRUSTS(A, B) ) >> TRUSTS(B, A) {squared}
+{1.3684927938887348} ( ( KNOWS(A, B) & KNOWS(B, A) ) & ~( TRUSTS(A, B) ) ) >> ~( TRUSTS(B, A) ) {squared}
+{1.9432128962646982} ( KNOWS(A, B) & PRIOR(0) ) >> TRUSTS(A, B) {squared}
+{0.39232114629962317} ( KNOWS(A, B) & TRUSTS(A, B) ) >> PRIOR(0) {squared}
+
+158681 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.mpeinference.reasoner. Returning default of edu.umd.cs.psl.reasoner.admm.ADMMReasonerFactory@465232e9.
+158681 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.maxiterations. Returning default of 25000.
+158681 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stepsize. Returning default of 1.0.
+158681 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonabs. Returning default of 1.0E-5.
+158681 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonrel. Returning default of 0.001.
+158681 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stopcheck. Returning default of 1.
+158681 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.numthreads. Returning default of 16.
+158714 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Grounding out model.
+162376 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Beginning inference.
+162591 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Inference complete. Writing results to Database.
+*****************************************************
+Area under positive-class PR curve: 0.5923995270749378
+Area under negative-class PR curve: 0.4589874410716065
+Area under ROC curve: 0.516162615671726
+162775 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value quad-mple-10-1.0 for option wiki.name.
+Method quad-mple-10-1.0, fold 0, auprc positive: 0.5458429936509389, negative: 0.46736130274684423, auROC: 0.5037526935480573
+Method quad-mple-10-1.0, fold 1, auprc positive: 0.5665107764946661, negative: 0.4287154988090172, auROC: 0.4869387676607092
+Method quad-mple-10-1.0, fold 2, auprc positive: 0.5923995270749378, negative: 0.4589874410716065, auROC: 0.516162615671726
+
+Method quad-mple-10-1.0, auprc positive: (mean/variance) 0.5682510990735142  /  3.6276616208263945E-4
+Method quad-mple-10-1.0, auprc negative: (mean/variance) 0.45168808087582263  /  2.755566899673989E-4
+Method quad-mple-10-1.0, auROC: (mean/variance) 0.5022846922934975  /  1.4341639593684619E-4
+
+*****************************************************
+args0 = quad
+************* Experiment Configurations *************
+wiki.maxspeudolikelihood.constrainttolerance: 1e-2
+wiki.maxspeudolikelihood.numsamples: 10
+wiki.learningmethod: MPLE
+wiki.votedperceptron.numsteps: 10
+wiki.votedperceptron.stepsize: 1.0
+wiki.name: quad-mple-10-1.0
+
+*****************************************************
+0    [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.dbpath. Returning default of /tmp/psl-wiki.
+367  [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.rdbmsdatastore.valuecolumn. Returning default of truth.
+367  [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.rdbmsdatastore.confidencecolumn. Returning default of confidence.
+367  [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.rdbmsdatastore.partitioncolumn. Returning default of partition.
+374  [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.rdbmsdatastore.usestringids. Returning default of false.
+2154 [main] INFO  FoldUtils  - Split hashcode -1480386451
+2974 [main] INFO  infolab.Wiki  - Computed training prior for fold 0 of 0.6572739187418086
+3056 [main] INFO  infolab.Wiki  - Computed testing prior for fold 0 of 0.6565988181221274
+Saw 3040 rvs and 3052 obs
+3914 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value MPLE for option wiki.learningmethod.
+3924 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 1.0 for option wiki.votedperceptron.stepsize.
+3924 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 10 for option wiki.votedperceptron.numsteps.
+3924 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.maxspeudolikelihood.bool. Returning default of false.
+3924 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 10 for option wiki.maxspeudolikelihood.numsamples.
+3924 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.maxspeudolikelihood.minwidth. Returning default of 0.01.
+3924 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 1e-2 for option wiki.maxspeudolikelihood.constrainttolerance.
+4111 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.weightlearning.reasoner. Returning default of edu.umd.cs.psl.reasoner.admm.ADMMReasonerFactory@38467116.
+4114 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.maxiterations. Returning default of 25000.
+4114 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stepsize. Returning default of 1.0.
+4114 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonabs. Returning default of 1.0E-5.
+4115 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonrel. Returning default of 0.001.
+4115 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stopcheck. Returning default of 1.
+4115 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.numthreads. Returning default of 16.
+174571 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value quad-mple-10-1.0 for option wiki.name.
+Learned model quad-mple-10-1.0
+Model:
+{0.5880187392512397} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.3971472917329988} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.3769581500950455} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{11.578097049740249} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.3769581500950455} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.3971472917329988} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.5880187392512397} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{11.578097049740249} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.3971472917329988} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.5880187392512397} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.3769581500950455} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{11.578097049740249} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.40691281503995774} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.40691281503995763} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.40691281503995774} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{12.966146889570343} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{1.8068655696486964} ( ( KNOWS(A, B) & KNOWS(B, A) ) & TRUSTS(A, B) ) >> TRUSTS(B, A) {squared}
+{1.8068655696486964} ( ( KNOWS(A, B) & KNOWS(B, A) ) & ~( TRUSTS(A, B) ) ) >> ~( TRUSTS(B, A) ) {squared}
+{2.474247581295713} ( KNOWS(A, B) & PRIOR(0) ) >> TRUSTS(A, B) {squared}
+{0.5762511131522846} ( KNOWS(A, B) & TRUSTS(A, B) ) >> PRIOR(0) {squared}
+
+174818 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.mpeinference.reasoner. Returning default of edu.umd.cs.psl.reasoner.admm.ADMMReasonerFactory@465232e9.
+174819 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.maxiterations. Returning default of 25000.
+174819 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stepsize. Returning default of 1.0.
+174819 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonabs. Returning default of 1.0E-5.
+174819 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonrel. Returning default of 0.001.
+174819 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stopcheck. Returning default of 1.
+174819 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.numthreads. Returning default of 16.
+174921 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Grounding out model.
+192887 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Beginning inference.
+193919 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Inference complete. Writing results to Database.
+*****************************************************
+Area under positive-class PR curve: 0.655043824233703
+Area under negative-class PR curve: 0.4187490701353837
+Area under ROC curve: 0.5365092011631012
+194690 [main] INFO  infolab.Wiki  - Computed training prior for fold 1 of 0.655921052631579
+194758 [main] INFO  infolab.Wiki  - Computed testing prior for fold 1 of 0.6552229092092418
+Saw 3106 rvs and 3040 obs
+195432 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value MPLE for option wiki.learningmethod.
+195433 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 1.0 for option wiki.votedperceptron.stepsize.
+195433 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 10 for option wiki.votedperceptron.numsteps.
+195433 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.maxspeudolikelihood.bool. Returning default of false.
+195433 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 10 for option wiki.maxspeudolikelihood.numsamples.
+195433 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.maxspeudolikelihood.minwidth. Returning default of 0.01.
+195433 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 1e-2 for option wiki.maxspeudolikelihood.constrainttolerance.
+195599 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.weightlearning.reasoner. Returning default of edu.umd.cs.psl.reasoner.admm.ADMMReasonerFactory@38467116.
+195599 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.maxiterations. Returning default of 25000.
+195599 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stepsize. Returning default of 1.0.
+195599 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonabs. Returning default of 1.0E-5.
+195599 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonrel. Returning default of 0.001.
+195599 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stopcheck. Returning default of 1.
+195599 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.numthreads. Returning default of 16.
+364582 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value quad-mple-10-1.0 for option wiki.name.
+Learned model quad-mple-10-1.0
+Model:
+{0.6689102341815507} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.6279947453786202} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.470171455848958} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{11.412525932942819} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.470171455848958} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.6279947453786202} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.6689102341815507} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{11.412525932942819} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.6279947453786202} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.6689102341815507} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.470171455848958} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{11.412525932942819} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.3402083455155069} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.3402083455155069} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.3402083455155069} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{13.186674008587971} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{1.605532460064574} ( ( KNOWS(A, B) & KNOWS(B, A) ) & TRUSTS(A, B) ) >> TRUSTS(B, A) {squared}
+{1.605532460064574} ( ( KNOWS(A, B) & KNOWS(B, A) ) & ~( TRUSTS(A, B) ) ) >> ~( TRUSTS(B, A) ) {squared}
+{2.4679311312477625} ( KNOWS(A, B) & PRIOR(0) ) >> TRUSTS(A, B) {squared}
+{0.5737986523854641} ( KNOWS(A, B) & TRUSTS(A, B) ) >> PRIOR(0) {squared}
+
+364814 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.mpeinference.reasoner. Returning default of edu.umd.cs.psl.reasoner.admm.ADMMReasonerFactory@465232e9.
+364814 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.maxiterations. Returning default of 25000.
+364814 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stepsize. Returning default of 1.0.
+364814 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonabs. Returning default of 1.0E-5.
+364814 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonrel. Returning default of 0.001.
+364814 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stopcheck. Returning default of 1.
+364814 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.numthreads. Returning default of 16.
+364916 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Grounding out model.
+383549 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Beginning inference.
+384134 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Inference complete. Writing results to Database.
+*****************************************************
+Area under positive-class PR curve: 0.662694006699194
+Area under negative-class PR curve: 0.3991050844201659
+Area under ROC curve: 0.5319767275611029
+384790 [main] INFO  infolab.Wiki  - Computed training prior for fold 2 of 0.654539600772698
+384860 [main] INFO  infolab.Wiki  - Computed testing prior for fold 2 of 0.6558947710295551
+Saw 3052 rvs and 3106 obs
+385445 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value MPLE for option wiki.learningmethod.
+385446 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 1.0 for option wiki.votedperceptron.stepsize.
+385446 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 10 for option wiki.votedperceptron.numsteps.
+385446 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.maxspeudolikelihood.bool. Returning default of false.
+385446 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 10 for option wiki.maxspeudolikelihood.numsamples.
+385446 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.maxspeudolikelihood.minwidth. Returning default of 0.01.
+385446 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 1e-2 for option wiki.maxspeudolikelihood.constrainttolerance.
+385618 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.weightlearning.reasoner. Returning default of edu.umd.cs.psl.reasoner.admm.ADMMReasonerFactory@38467116.
+385618 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.maxiterations. Returning default of 25000.
+385618 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stepsize. Returning default of 1.0.
+385619 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonabs. Returning default of 1.0E-5.
+385619 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonrel. Returning default of 0.001.
+385619 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stopcheck. Returning default of 1.
+385619 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.numthreads. Returning default of 16.
+558848 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value quad-mple-10-1.0 for option wiki.name.
+Learned model quad-mple-10-1.0
+Model:
+{0.5832746161890837} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.5434450937974853} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.3614736883563099} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{11.622231451526547} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.3614736883563099} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.5434450937974853} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(A, B) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.5832746161890837} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{11.622231451526547} ( ( ( ( ( ( ( KNOWS(A, B) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(A, B) ) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.5434450937974853} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.5832746161890837} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.3614736883563099} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & TRUSTS(B, C) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{11.622231451526547} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(B, C) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & ~( TRUSTS(B, C) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.22323089622730627} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.22323089622730627} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & TRUSTS(B, A) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{0.22323089622730627} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & TRUSTS(C, B) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> ~( TRUSTS(A, C) ) {squared}
+{13.873423279074231} ( ( ( ( ( ( ( KNOWS(B, A) & KNOWS(C, B) ) & KNOWS(A, C) ) & ~( TRUSTS(B, A) ) ) & ~( TRUSTS(C, B) ) ) & #NOTEQUAL(A, B) ) & #NOTEQUAL(B, C) ) & #NOTEQUAL(A, C) ) >> TRUSTS(A, C) {squared}
+{0.9480911385757256} ( ( KNOWS(A, B) & KNOWS(B, A) ) & TRUSTS(A, B) ) >> TRUSTS(B, A) {squared}
+{0.9480911385757256} ( ( KNOWS(A, B) & KNOWS(B, A) ) & ~( TRUSTS(A, B) ) ) >> ~( TRUSTS(B, A) ) {squared}
+{2.4628692936755554} ( KNOWS(A, B) & PRIOR(0) ) >> TRUSTS(A, B) {squared}
+{0.5685746798615503} ( KNOWS(A, B) & TRUSTS(A, B) ) >> PRIOR(0) {squared}
+
+559073 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.mpeinference.reasoner. Returning default of edu.umd.cs.psl.reasoner.admm.ADMMReasonerFactory@465232e9.
+559073 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.maxiterations. Returning default of 25000.
+559073 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stepsize. Returning default of 1.0.
+559073 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonabs. Returning default of 1.0E-5.
+559073 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonrel. Returning default of 0.001.
+559073 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stopcheck. Returning default of 1.
+559073 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.numthreads. Returning default of 16.
+559170 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Grounding out model.
+577146 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Beginning inference.
+577709 [main] INFO  edu.umd.cs.psl.application.inference.MPEInference  - Inference complete. Writing results to Database.
+*****************************************************
+Area under positive-class PR curve: 0.6623229385687247
+Area under negative-class PR curve: 0.41455409815855987
+Area under ROC curve: 0.5434050718119949
+578220 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value quad-mple-10-1.0 for option wiki.name.
+Method quad-mple-10-1.0, fold 0, auprc positive: 0.655043824233703, negative: 0.4187490701353837, auROC: 0.5365092011631012
+Method quad-mple-10-1.0, fold 1, auprc positive: 0.662694006699194, negative: 0.3991050844201659, auROC: 0.5319767275611029
+Method quad-mple-10-1.0, fold 2, auprc positive: 0.6623229385687247, negative: 0.41455409815855987, auROC: 0.5434050718119949
+
+Method quad-mple-10-1.0, auprc positive: (mean/variance) 0.6600202565005405  /  1.2405387646186039E-5
+Method quad-mple-10-1.0, auprc negative: (mean/variance) 0.41080275090470314  /  7.135066557281688E-5
+Method quad-mple-10-1.0, auROC: (mean/variance) 0.537297000178733  /  2.207815569726934E-5
+
+*****************************************************
+args0 = quad
+************* Experiment Configurations *************
+wiki.maxspeudolikelihood.constrainttolerance: 1e-2
+wiki.maxspeudolikelihood.numsamples: 10
+wiki.learningmethod: MPLE
+wiki.votedperceptron.numsteps: 10
+wiki.votedperceptron.stepsize: 1.0
+wiki.name: quad-mple-10-1.0
+
+*****************************************************
+0    [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.dbpath. Returning default of /tmp/psl-wiki.
+412  [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.rdbmsdatastore.valuecolumn. Returning default of truth.
+412  [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.rdbmsdatastore.confidencecolumn. Returning default of confidence.
+412  [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.rdbmsdatastore.partitioncolumn. Returning default of partition.
+419  [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.rdbmsdatastore.usestringids. Returning default of false.
+21310 [main] INFO  FoldUtils  - Split hashcode 1868025820
+45798 [main] INFO  infolab.Wiki  - Computed training prior for fold 0 of 0.7824262867307724
+47705 [main] INFO  infolab.Wiki  - Computed testing prior for fold 0 of 0.7830901873530378
+Saw 59064 rvs and 59589 obs
+60956 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value MPLE for option wiki.learningmethod.
+60965 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 1.0 for option wiki.votedperceptron.stepsize.
+60965 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 10 for option wiki.votedperceptron.numsteps.
+60965 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.maxspeudolikelihood.bool. Returning default of false.
+60965 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 10 for option wiki.maxspeudolikelihood.numsamples.
+60965 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.maxspeudolikelihood.minwidth. Returning default of 0.01.
+60965 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - Found value 1e-2 for option wiki.maxspeudolikelihood.constrainttolerance.
+67604 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.weightlearning.reasoner. Returning default of edu.umd.cs.psl.reasoner.admm.ADMMReasonerFactory@51891008.
+67607 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.maxiterations. Returning default of 25000.
+67607 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stepsize. Returning default of 1.0.
+67607 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonabs. Returning default of 1.0E-5.
+67607 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.epsilonrel. Returning default of 0.001.
+67607 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.stopcheck. Returning default of 1.
+67610 [main] INFO  edu.umd.cs.psl.config.ConfigManager  - No value found for option wiki.admmreasoner.numthreads. Returning default of 16.
