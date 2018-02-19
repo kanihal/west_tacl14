@@ -1,7 +1,7 @@
 Build & Run Instructions
 -------------
-This software depends on Java 7 and Java 8 and Maven 3 (http://maven.apache.org). 
-Python3 are also required to for positive/negative sentiment analysis using logistic regression available in `sklearn` library.
+This code depends on Java 7 and Java 8 and Maven 3 (http://maven.apache.org). 
+Python3 is also required to for positive/negative sentiment analysis using logistic regression available in `sklearn` library.
 
 ##### Install PSL
 The algorithms for these experiments are implemented in the PSL library, version 1.1 (https://github.com/linqs/psl). Clone this particular project and Run 
