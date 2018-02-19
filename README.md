@@ -31,7 +31,7 @@ For a Wikipedia editor to become an administrator, a request for adminship (RfA)
 preprocessing scripts are available in `data` folder.
 
 ## Experiment Results 
-This section will be updated with more info - see the note above
+This section will be updated with more info later
 
 #### Sentiment Analysis based only comment text (lexicon based SA)
 We used logistic classifier to classify comment text as Negative/positive  sentiment. Use `sentiment_analysis.py` in `senti` folder for this.
